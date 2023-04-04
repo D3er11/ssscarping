@@ -104,7 +104,7 @@ def giveaway_participator():
                 fail_attempts += 1
                 try:
                     driver.find_element(By.XPATH, '//button[text()="Take a part"]')
-                    # Добавить тут Take a part or Принять участие
+                    # Достать текст из блока вверху, где язык: если en- тогда "Take a part", если ru- тогда "Принять участие"
                     success_attempts += 1
                 except Exception as e:
                     fail_attempts += 1
