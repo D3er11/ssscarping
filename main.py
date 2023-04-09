@@ -57,8 +57,10 @@ driver.find_element(By.CLASS_NAME, "button-adaptive").click()
 time.sleep(3)
 driver.get("https://egbet.live/")
 time.sleep(5)
+site_balance = driver.find_element(By.CLASS_NAME, "user__balance--value").text
+print(site_balance)
 try:
-    driver.find_element(By.XPATH, "//*[@class='btn btn--gray-invert js-close-block-btn']").click()
+    driver.find_element(By.XPATH, "//*[@class='cookies-panel__close js-close-block-btn']").click()
 except Exception as e:
     print(e)
 try:
@@ -77,30 +79,27 @@ for i in range(1, 4500):
         time.sleep(sleep_time_random)
         #driver.find_element("body").send_keys(Keys.CONTROL + Keys.HOME)
         print('trying to participate in giveaway')
-        site_balance = driver.find_element(By.XPATH, "/html/body/div[2]/div[1]/div[1]/div/div[3]/div[1]/div[2]/a/div/span").text
-        print(site_balance)
-        bonus = driver.find_element(By.CLASS_NAME, "giveaway-prize__description").text
+        prize_description = driver.find_element(By.CLASS_NAME, "giveaway-prize__description").text
         bonus_word = 'Бонус'
-        if bonus_word in bonus:
-            print('pass shit ' + bonus)
+        if bonus_word in prize_description:
+            print('pass shit ' + prize_description)
             time_now = datetime.today().strftime('%H:%M:%S %p')
             loot_time = datetime.today() + timedelta(seconds=1670)
             loot_time = loot_time.strftime('%H:%M %p')
             print("Need to sleep after bonus: ", time_now)
             print("Awake time after bonus: ", loot_time)
-            sleep_time_random = random.randint(1650, 1670)
+            sleep_time_random = random.randint(1778, 1798)
             time.sleep(sleep_time_random)
             print("work work")
             continue
         else:
-            print("LEEET'S GOOOOO " + bonus)
+            print("LEEET'S GOOOOO " + prize_description)
 
         try:
             driver.find_element(By.XPATH, "/html/body/div[2]/div[1]/div[4]/div/aside/div/div[5]/div[2]/div[1]/button").click()
             success_attempts += 1
             print(f"iam participator and have: {success_attempts} success_attempts, with only {fail_attempts} fail attempts")
         except Exception as e:
-            time.sleep(10000)
             print(e)
             fail_attempts += 1
             if fail_attempts > 0:
@@ -150,4 +149,3 @@ Check every 10 min, until it will be active.
 Узнать, как происходит передача.
 Настроить прием.
 '''
-
