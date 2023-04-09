@@ -64,7 +64,7 @@ try:
 except Exception as e:
     print(e)
 try:
-    driver.find_element(By.XPATH, "//*[@class='cookies-panel__close js-close-block-btn']").click()
+    driver.find_element(By.XPATH, "//*[@class='btn btn--gray-invert js-close-block-btn']").click()
 except Exception as e:
     print(e)
 time.sleep(5)
