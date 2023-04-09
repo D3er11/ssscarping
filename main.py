@@ -149,3 +149,4 @@ Check every 10 min, until it will be active.
 Узнать, как происходит передача.
 Настроить прием.
 '''
+
