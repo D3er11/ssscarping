@@ -77,6 +77,8 @@ for i in range(1, 4500):
         time.sleep(sleep_time_random)
         #driver.find_element("body").send_keys(Keys.CONTROL + Keys.HOME)
         print('trying to participate in giveaway')
+        site_balance = driver.find_element(By.XPATH, "/html/body/div[2]/div[1]/div[1]/div/div[3]/div[1]/div[2]/a/div/span").text
+        print(site_balance)
         bonus = driver.find_element(By.CLASS_NAME, "giveaway-prize__description").text
         bonus_word = 'Бонус'
         if bonus_word in bonus:
