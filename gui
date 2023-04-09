@@ -32,3 +32,5 @@ unzip chromedriver_linux64.zip && dpkg -i google-chrome*.deb && apt install -y -
 
 rm -rf chromedriver_linux64.zip google-chrome-stable_current_amd64.deb LICENSE.chromedriver
  
+Зайти на каждый акк и запустить chrome!!!
+google-chrome --no-sandbox
