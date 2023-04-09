@@ -14,11 +14,12 @@ systemctl status xrdp
 
 ufw allow 3389
 ufw allow 22
-ufw enable
+ufw enable -y
 ufw reload
 
 ufw status
 
+apt install python3-pip
 pip install -U pip
 
 pip install -U setuptools
