@@ -14,29 +14,26 @@ systemctl status xrdp
 
 ufw allow 3389
 ufw allow 22
-ufw enable -y
+ufw enable
 ufw reload
 
 ufw status
 
-apt install python3-pip
+apt install -y python3-pip
 pip install -U pip
 
 pip install -U setuptools
-pip install selenium
+pip install --upgrade pip && pip install --upgrade requests && pip install selenium && pip install 2captcha-python
 
-pip install --upgrade pip
-pip3 install 2captcha-python
-
-pip3 install --upgrade requests
-
-apt update && apt upgrade -y
-
-cd /home/user/ssscrap/
+mkdir -p /home/realangrymedvedegb/egbscrap && cd /home/realangrymedvedegb/egbscrap && touch /home/realangrymedvedegb/egbscrap/ssscraping.py
 
 sudo apt install -y libxss1 libappindicator1 libindicator7
 
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+wget  https://chromedriver.storage.googleapis.com/112.0.5615.49/chromedriver_linux64.zip
+
+unzip chromedriver_linux64.zip
 
 sudo dpkg -i google-chrome*.deb
 
@@ -51,9 +48,5 @@ google-chrome --version
 Что-бы вернуться к свёрнутому screen: screen -r
 Что-бы завершить сессию/закрыть screen: exit
 
-
-wget  https://chromedriver.storage.googleapis.com/112.0.5615.49/chromedriver_linux64.zip
-
-unzip chromedriver_linux64.zip
-  
+rm -rf chromedriver_linux64.zip google-chrome-stable_current_amd64.deb LICENSE.chromedriver
  
