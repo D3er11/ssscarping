@@ -19,11 +19,7 @@ ufw reload
 
 ufw status
 
-apt install -y python3-pip
-pip install -U pip
-
-pip install -U setuptools
-pip install --upgrade pip && pip install --upgrade requests && pip install selenium && pip install 2captcha-python
+apt install -y python3-pip && pip install -U pip && pip install -U setuptools && pip install --upgrade pip && pip install --upgrade requests && pip install selenium && pip install 2captcha-python
 
 mkdir -p /home/realangrymedvedegb/egbscrap && cd /home/realangrymedvedegb/egbscrap && touch /home/realangrymedvedegb/egbscrap/ssscraping.py
 
