@@ -1,0 +1,58 @@
+sudo passwd root
+
+su root
+
+echo ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDGqkmQxVxVQyfIKAocRPxmuOXjKScE1fBiX8t1bkytTi2/jY6DAQNEmvHA2FbxIHa6g4rH6x6cB8HNUh5syNEXx8GxitQR/ERJ2XFPEtin2iLrLMxcVbiFssImjAuKVDwudHqT3Y7iLqk904pFwfm05NltIgQzv10+aayjXYhofzaUdKIL3b7HpAfgitvXJVjvGZ/NQrH9HkDdXpygsGRyIC/f94N4GnIHmEP64sjC7tzwG2Rj+4NWpOhY/s7x341np9/aWGVmOV/w/q2N8GvtOyIaB5PnIn9JhyXbUOoi8mpLwMD6aKuLxmZ4kM7vizIzYVJU/RN6CyarJesugmbKfOnps+YOwkkZh26rCDbed+PH6arqhr2UaYRewTXokENnbFqGAfMiRUUuQxk6YHYK8BEV5VxGkA4aszE4Q1KXhualMupx51hLaZx0IGaW7qDyQ5JjXhb7BNyk1djGnHxLoaHI5Iv+WHn2HxUkOWibWWhwtyE8ziUl7EBLggCYHEc= tselpukhousky  >> ~/.ssh/authorized_keys
+
+apt update && apt upgrade -y
+
+apt install ubuntu-desktop-minimal -y
+
+apt install xrdp -y
+
+systemctl status xrdp
+
+ufw allow 3389
+ufw allow 22
+ufw enable
+ufw reload
+
+ufw status
+
+pip install -U pip
+
+pip install -U setuptools
+pip install selenium
+
+pip install --upgrade pip
+pip3 install 2captcha-python
+
+pip3 install --upgrade requests
+
+apt update && apt upgrade -y
+
+cd /home/user/ssscrap/
+
+sudo apt install -y libxss1 libappindicator1 libindicator7
+
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+sudo dpkg -i google-chrome*.deb
+
+sudo apt install -y -f
+
+google-chrome --version
+
+Установка screen: sudo apt install screen
+Создаст новый screen: screen
+Свернуть screen: CRTL + A, после чего нажмаем D
+Что-бы посмотреть список запущенных screen: screen -ls
+Что-бы вернуться к свёрнутому screen: screen -r
+Что-бы завершить сессию/закрыть screen: exit
+
+
+wget  https://chromedriver.storage.googleapis.com/112.0.5615.49/chromedriver_linux64.zip
+
+unzip chromedriver_linux64.zip
+  
+ 
