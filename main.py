@@ -58,7 +58,7 @@ time.sleep(3)
 driver.get("https://egbet.live/")
 time.sleep(5)
 try:
-    driver.find_element(By.XPATH, "//*[@class='cookies-panel__close js-close-block-btn']").click()
+    driver.find_element(By.XPATH, "//*[@class='btn btn--gray-invert js-close-block-btn']").click()
 except Exception as e:
     print(e)
 try:
