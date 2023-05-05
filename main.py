@@ -77,7 +77,7 @@ for i in range(1, 4500):
         print('reloaded page now need to sleep')
         sleep_time_random = random.randint(9, 15)
         time.sleep(sleep_time_random)
-        #driver.find_element("body").send_keys(Keys.CONTROL + Keys.HOME)
+        driver.find_element(By.TAG_NAME, "body").send_keys(Keys.CONTROL + Keys.HOME)
         print('trying to participate in giveaway')
         prize_description = driver.find_element(By.CLASS_NAME, "giveaway-prize__description").text
         bonus_word = 'Бонус'
