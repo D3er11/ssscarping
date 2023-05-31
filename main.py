@@ -13,7 +13,7 @@ import requests
 
 print("Okay, Let's go!!")
 
-TOKEN = "6081536762:AAEooblcrUTv0SENSRdFtaW32IyqMxLVeaQ"
+TOKEN = "Token"
 chat_id = "785316401"
 message = "test Found ticket"
 page = 'https://pass.rw.by/ru/route/?from=%D0%9C%D0%BE%D0%B3%D0%B8%D0%BB%D1%91%D0%B2&from_exp=2100150&from_esr=156609&to=%D0%9C%D0%B8%D0%BD%D1%81%D0%BA&to_exp=2100000&to_esr=140210&date=today&type=1#'
@@ -35,11 +35,11 @@ driver.get("https://egbet.live/play/simple_bets#auth")
 time.sleep(3)
 username = driver.find_element(By.ID, "field-log-login")
 password = driver.find_element(By.ID, "field-log-password")
-username.send_keys("realangrymedved")
+username.send_keys("login")
 time.sleep(2)
-password.send_keys("Alexegb8")
+password.send_keys("password")
 time_before_solve = datetime.now()
-solver = TwoCaptcha('6b110d874e22f0023b1a12484002fbe2')
+solver = TwoCaptcha('apicapthcatoken')
 result = solver.recaptcha(
     sitekey="6LdcP4oUAAAAAG88ESQr1NucEYZbVl5-jxQZtw78",
     url="https://egbet.live/play/simple_bets#auth"
@@ -143,9 +143,7 @@ Check every 10 min, until it will be active.
 опробовать click library.
 Заходить на главную страницу, а не на страницу с авторизацией.
 Посчитать, сколько времени я трачу на авторизацию, уменьшить sleep.
+Понять, использовать функцию sleep или selenium function WaitUntilClickable 
 Настроить выдачу всех ошибок в try, отправлять ошибки в телеграм.
-Придумать проверку на приз в виде скинов,
-Узнать, как происходит передача.
-Настроить прием.
 '''
 
